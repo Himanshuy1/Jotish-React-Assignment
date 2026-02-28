@@ -1,0 +1,45 @@
+﻿import { useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+
+export default function PhotoResult() {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    return (
+        <>
+            <Navbar />
+
+            <div
+                style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginTop: "50px",
+                }}
+            >
+                <div
+                    style={{
+                        background: "white",
+                        padding: "30px",
+                        borderRadius: "10px",
+                        boxShadow: "0 0 15px rgba(0,0,0,0.2)",
+                        textAlign: "center",
+                    }}
+                >
+                    <h2>Captured Photo</h2>
+
+                    <img
+                        src={location.state}
+                        alt="Captured"
+                        width="400"
+                    />
+
+                    <br /><br />
+
+                    <button onClick={() => navigate("/list")}>
+                        Back to List
+                    </button>
+                </div>
+            </div>
+        </>
+    );
+}
