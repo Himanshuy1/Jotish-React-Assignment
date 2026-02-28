@@ -22,8 +22,8 @@ charts and map representation.
 - Filter by salary
 - Dashboard Analytics
 - Protected Routes
-- Modern UI Dashboard
 - Dark/Light mode Toggle
+- Modern UI Dashboard
 
 ---
 
